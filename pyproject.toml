@@ -1,0 +1,7 @@
+[project]
+name = "weather_prediction"
+version = "0.1.0"
+description = "End to End Machine Learning Implementation to predict the weather"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []

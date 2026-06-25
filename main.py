@@ -1,6 +1,13 @@
-def main():
-    print("Hello from weather-prediction!")
+from weather_prediction import logger
+from weather_prediction.pipeline.data_ingestion_pipeline import DataIngestionPipeline
 
 
-if __name__ == "__main__":
-    main()
+STAGE_NAME = "Data Ingestion stage"
+try:
+      logger.info(f">>>>>> {STAGE_NAME} started <<<<<<")
+      obj = DataIngestionPipeline()
+      obj.main()
+      logger.info(f">>>>>> {STAGE_NAME} completed <<<<<<")
+except Exception as e:
+      logger.exception(e)
+      raise e
